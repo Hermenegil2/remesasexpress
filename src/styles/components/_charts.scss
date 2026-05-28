@@ -1,0 +1,16 @@
+.chart-container {
+  @apply w-full;
+  min-height: 200px;
+}
+
+.chart-legend {
+  @apply flex flex-wrap gap-4 mt-4;
+}
+
+.chart-legend-item {
+  @apply flex items-center gap-2 text-xs text-gray-500;
+}
+
+.chart-legend-dot {
+  @apply w-2.5 h-2.5 rounded-full;
+}

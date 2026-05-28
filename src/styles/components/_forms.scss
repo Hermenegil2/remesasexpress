@@ -1,0 +1,78 @@
+.form-field-modern {
+  @apply w-full;
+}
+
+.form-field-modern .mat-mdc-form-field-subscript-wrapper {
+  display: none;
+}
+
+.form-field-modern .mdc-text-field--outlined {
+  --mdc-outlined-text-field-container-shape: 10px;
+}
+
+.form-field-modern .mat-mdc-form-field-infix {
+  @apply py-2;
+}
+
+.btn-premium {
+  @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-medium;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-premium-primary {
+  @apply btn-premium;
+  background: #1e3a5f;
+  @apply text-white;
+}
+
+.btn-premium-primary:hover {
+  background: #15294a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(30, 58, 95, 0.3);
+}
+
+.btn-premium-green {
+  @apply btn-premium;
+  background: #059669;
+  @apply text-white;
+}
+
+.btn-premium-green:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.3);
+}
+
+.btn-premium-ghost {
+  @apply btn-premium;
+  @apply text-gray-600 bg-gray-100;
+}
+
+.dark .btn-premium-ghost {
+  @apply text-gray-300 bg-gray-800;
+}
+
+.btn-premium-ghost:hover {
+  @apply bg-gray-200;
+}
+
+.dark .btn-premium-ghost:hover {
+  @apply bg-gray-700;
+}
+
+.input-search {
+  @apply w-full px-4 py-2.5 pl-10 rounded-xl border border-gray-200 bg-gray-50 text-sm;
+  transition: all 0.2s ease;
+}
+
+.dark .input-search {
+  @apply border-gray-700 bg-gray-800 text-gray-100;
+}
+
+.input-search:focus {
+  @apply outline-none ring-2 ring-blue-500/20 border-blue-400 bg-white;
+}
+
+.dark .input-search:focus {
+  @apply ring-blue-400/20 border-blue-500 bg-gray-800;
+}

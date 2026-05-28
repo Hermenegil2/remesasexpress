@@ -1,0 +1,84 @@
+.sidebar {
+  @apply h-screen fixed left-0 top-0 z-40 flex flex-col;
+  background: #0f1d35;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.sidebar.expanded {
+  width: 260px;
+}
+
+.sidebar.collapsed {
+  width: 72px;
+}
+
+.sidebar-header {
+  @apply flex items-center gap-3 px-4 h-16 border-b border-white/10;
+}
+
+.sidebar-logo {
+  @apply w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0;
+  background: linear-gradient(135deg, #059669, #047857);
+}
+
+.sidebar-brand {
+  @apply text-white font-semibold text-sm whitespace-nowrap;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-nav {
+  @apply flex-1 overflow-y-auto py-4 px-2;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+
+.nav-item {
+  @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium mb-0.5;
+  color: rgba(255,255,255,0.6);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.nav-item:hover {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.9);
+}
+
+.nav-item.active {
+  background: rgba(5, 150, 105, 0.15);
+  color: #34d399;
+}
+
+.nav-item-icon {
+  @apply w-5 h-5 flex items-center justify-center flex-shrink-0;
+}
+
+.nav-item-label {
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-footer {
+  @apply px-2 py-4 border-t border-white/10;
+}
+
+.sidebar-collapsed .nav-item-label {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-brand {
+  display: none;
+}
+
+.sidebar-collapsed .sidebar-header {
+  @apply justify-center px-0;
+}
